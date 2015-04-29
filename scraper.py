@@ -23,7 +23,7 @@ html = urllib2.urlopen(url)
 soup = BeautifulSoup(html)
 
 # find all entries with the required class
-links = soup.findAll('a', href=True)
+links = soup.findAll('a', title=True)
 
 for link in links:
 	url = 'http://www.somerset.gov.uk' + link['href']
