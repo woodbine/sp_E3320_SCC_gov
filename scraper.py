@@ -29,7 +29,7 @@ for link in links:
 	url = 'http://www.somerset.gov.uk' + link['href']
 	aTitle = link['title'] #  gets the title from the anchor tag
 	if 'csv' in aTitle:
-		title = link.a.contents[0]
+		title = link.contents[0]
 		# create the right strings for the new filename
 		csvYr = title.split(' ')[1]
 		csvMth = title.split(' ')[0][:3]
