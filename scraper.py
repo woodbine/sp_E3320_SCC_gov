@@ -28,9 +28,8 @@ links = soup.findAll('a', title=True)
 for link in links:
 	url = 'http://www.somerset.gov.uk' + link['href']
 	aTitle = link['title'] #  gets the title from the anchor tag
-	print aTitle
 	if 'csv' in aTitle:
-		title = link.text
+		title = link.a.contents[0]
 		# create the right strings for the new filename
 		csvYr = title.split(' ')[1]
 		csvMth = title.split(' ')[0][:3]
