@@ -27,6 +27,7 @@ links = soup.findAll('a', href=True)
 
 for link in links:
 	url = 'http://www.somerset.gov.uk' + link['href']
+	print link
 	if 'csv' in link:
 		title = link.text
 		# create the right strings for the new filename
